@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Romeo Makobo — V2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">ROMEO <span>MAKOBO</span></div>
+    <div class="profile">
+      <div class="avatar">RM</div>
+      <h2>Romeo Makobo ✓</h2>
+      <p>Créateur · YouTubeur · Entrepreneur</p>
+      <div class="mini-stats"><b>30K+</b><b>12M+</b><b>1.7M+</b><small>Abonnés &nbsp; Vues &nbsp; Engagement</small></div>
+      <button class="primary" onclick="toggleFollow()">👥 <span id="followText">S'abonner</span></button>
+    </div>
+    <nav>
+      <a class="active">⌂ Accueil</a><a>▶ Vidéos</a><a>▧ Photos</a><a>🛒 Boutique</a>
+      <a>ⓘ À propos</a><a>✉ Contact</a>
+      <hr>
+      <a>♧ Mes abonnements</a><a>♧ Activité</a><a>🔔 Notifications <i>3</i></a><a>✉ Messages</a>
+    </nav>
+    <div class="side-bottom"><button onclick="alert('Mode sombre déjà activé.')">☾ Mode sombre</button><p>© 2026 Romeo Makobo</p></div>
+  </aside>
+
+  <main>
+    <header>
+      <div class="mobile-brand">ROMEO <span>MAKOBO</span></div>
+      <nav class="topnav"><a class="active">Accueil</a><a>Vidéos</a><a>Photos</a><a>Boutique</a><a>À propos</a><a>Contact</a></nav>
+      <div class="actions"><button>⌕</button><button>🔔<b>3</b></button><button class="outline" onclick="openModal('login')">Connexion</button><button class="primary small" onclick="openModal('signup')">S'inscrire</button></div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CRÉATEUR DE CONTENU · YOUTUBEUR · ENTREPRENEUR</p>
+        <h1>ROMEO <em>Makobo</em></h1>
+        <p>Bienvenue sur mon espace officiel : vidéos, photos, actualités et boutique.</p>
+        <div class="socials">▶ &nbsp; ◎ &nbsp; ♪ &nbsp; f &nbsp; 𝕏</div>
+      </div>
+      <div class="hero-card">
+        <h3>Restez connecté !</h3><p>Activez les notifications pour ne rater aucune nouvelle publication.</p>
+        <button class="primary" onclick="notifyOn()">🔔 Activer les notifications</button>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <div>
+        <div class="section-head"><h2>Dernières publications</h2><a>Voir tout</a></div>
+        <div class="tabs"><button class="active">Tout</button><button>Vidéos</button><button>Photos</button><button>Populaires</button></div>
+        <div class="posts">
+          <article class="post"><div class="media media1"><span>MERCI<br><strong>30K</strong><br>ABONNÉS</span></div><div class="post-body"><b>Romeo Makobo ✓</b><small>Il y a 2 heures</small><h3>30K MERCI À VOUS ! ❤️</h3><p>On continue l'aventure ensemble.</p><div class="engage"><button onclick="like(this)">♡ 1.2K</button><span>◯ 128</span><span>◉ 15.6K</span></div></div></article>
+          <article class="post"><div class="media media2"><span>⚽<br>MAKOBO<br><strong>#9</strong></span></div><div class="post-body"><b>Romeo Makobo ✓</b><small>Il y a 1 jour</small><h3>La passion avant tout ! ⚽</h3><p>Le travail, la discipline et la foi.</p><div class="engage"><button onclick="like(this)">♡ 2.1K</button><span>◯ 210</span><span>◉ 28.7K</span></div></div></article>
+          <article class="post"><div class="media media3"><span>NEW<br>LOOK</span></div><div class="post-body"><b>Romeo Makobo ✓</b><small>Il y a 2 jours</small><h3>New look. New mindset. 🔥</h3><p>Toujours plus haut.</p><div class="engage"><button onclick="like(this)">♡ 3K</button><span>◯ 256</span><span>◉ 31K</span></div></div></article>
+        </div>
+
+        <div class="section-head shop-head"><h2>Boutique</h2><a>Voir tous les produits</a></div>
+        <div class="products">
+          <div class="product"><div class="prod-img">RM<br>👕</div><b>T-Shirt RM King</b><strong>$25.00</strong><small>⭐ 4.9 (120)</small><button onclick="order('T-Shirt RM King')">Ajouter au panier</button></div>
+          <div class="product"><div class="prod-img">RM<br>🧥</div><b>Hoodie RM</b><strong>$45.00</strong><small>⭐ 4.8 (98)</small><button onclick="order('Hoodie RM')">Ajouter au panier</button></div>
+          <div class="product"><div class="prod-img">RM<br>🧢</div><b>Casquette RM</b><strong>$20.00</strong><small>⭐ 4.9 (76)</small><button onclick="order('Casquette RM')">Ajouter au panier</button></div>
+          <div class="product"><div class="prod-img">RM<br>☕</div><b>Mug RM</b><strong>$15.00</strong><small>⭐ 5.0 (62)</small><button onclick="order('Mug RM')">Ajouter au panier</button></div>
+        </div>
+      </div>
+
+      <aside class="right">
+        <div class="panel"><h3>Statistiques rapides</h3><p>◉ Vues totales <b>12.4M</b></p><p>♡ Likes totaux <b>1.7M</b></p><p>♧ Abonnés <b>30.2K</b></p><p>🛒 Ventes ce mois <b>$2,450</b></p><p>▣ Commandes <b>24</b></p><button class="outline full" onclick="openModal('dashboard')">Voir mes statistiques</button></div>
+        <div class="panel"><h3>Connexion</h3><input placeholder="Email ou numéro de téléphone"><input placeholder="Mot de passe" type="password"><button class="primary full" onclick="alert('Prototype : connexion à connecter à une base de données.')">Connexion</button><button class="green full">☏ Connexion par téléphone</button><p class="center">Pas encore de compte ? <a onclick="openModal('signup')">S'inscrire maintenant</a></p></div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="modal" class="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
